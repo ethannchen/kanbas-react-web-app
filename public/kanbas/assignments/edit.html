@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit</title>
+  </head>
+
+  <body>
+    <table width="100%">
+      <tbody valign="top">
+        <tr>
+          <!-- First column: Kanbas Navigation -->
+          <td>
+            <ul>
+              <li><a href="../navigation-page/account-nav.html">Account</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="../navigation-page/course-nav.html">Courses</a></li>
+              <li><a href="#">Calendar</a></li>
+              <li><a href="#">Inbox</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Studio</a></li>
+              <li><a href="#">Commons</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </td>
+          <!-- Second column: Course Navigation -->
+          <td>
+            <ul>
+              <li><a href="../home.html">Home</a></li>
+              <li><a href="#">Modules</a></li>
+              <li><a href="#">Piazza</a></li>
+              <li><a href="#">Zoom Meetings</a></li>
+              <li><a href="../assignments/index.html">Assignments</a></li>
+              <li><a href="#">Quizzes</a></li>
+              <li><a href="../grades.html">Grades</a></li>
+              <li><a href="#">People</a></li>
+              <li><a href="#">Panopto Video</a></li>
+              <li><a href="#">Discussions</a></li>
+              <li><a href="#">Announcements</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Rubrics</a></li>
+              <li><a href="#">Outcomes</a></li>
+              <li><a href="#">Collaborations</a></li>
+              <li><a href="#">Syllabus</a></li>
+              <li><a href="./settings/index.html">Settings</a></li>
+            </ul>
+          </td>
+          <!-- Third column -->
+          <td>
+            <div id="edit-page-header">
+              <select>
+                <option value="SPEEDGRADER" selected>SpeedGrader</option>
+              </select>
+              <hr />
+            </div>
+
+            <form action="../assignments/index.html">
+              <label for="assignment-name">
+                <h3>Assignment Name</h3>
+              </label>
+
+              <input type="text" value="A1 - ENV + HTML" id="assignment-name" />
+              <br /><br />
+
+              <textarea cols="30" rows="10">
+This is the assignment description.</textarea
+              >
+              <br /><br />
+
+              <label for="assignment-points">Points</label>
+              <br />
+              <input
+                type="number"
+                id="assignment-points"
+                value="100"
+                max="100"
+                min="0"
+              />
+
+              <br /><br />
+
+              <label for="assignment-group">Assignment Group</label>
+              <br />
+              <select id="assignment-group">
+                <option value="ASSIGNMENTS" selected>Assignments</option>
+                <option value="QUIZZES">Quizzes</option>
+                <option value="EXAMS">Exams</option>
+                <option value="PROJECT">Project</option>
+              </select>
+
+              <br /><br />
+
+              <label for="assignment-display-group-as">Display Grade as</label>
+              <br />
+              <select id="assignment-display-group-as">
+                <option value="PERCENTAGE" selected>Percentage</option>
+              </select>
+
+              <br /><br />
+
+              <div id="assignment-submission-type">
+                <label for="submission-type">Submission Type</label>
+                <br />
+                <select id="submission-type">
+                  <option value="ONLINE" selected>Online</option>
+                </select>
+              </div>
+              <br />
+
+              <div id="assignment-online-entry-options">
+                <label for="">Online Entry Options</label>
+                <br />
+                <input
+                  type="checkbox"
+                  name="online-entry-options"
+                  id="ckbox-text-entry"
+                />
+                <label for="ckbox-text-entry">Text Entry</label>
+                <br />
+
+                <input
+                  type="checkbox"
+                  name="online-entry-options"
+                  id="ckbox-website-url"
+                />
+                <label for="ckbox-website-url">Website URL</label>
+                <br />
+
+                <input
+                  type="checkbox"
+                  name="online-entry-options"
+                  id="ckbox-media-recordings"
+                />
+                <label for="ckbox-media-recordings">Media Recordings</label>
+                <br />
+
+                <input
+                  type="checkbox"
+                  name="online-entry-options"
+                  id="ckbox-student-annotation"
+                />
+                <label for="ckbox-student-annotation">Student Annotation</label>
+                <br />
+
+                <input
+                  type="checkbox"
+                  name="online-entry-options"
+                  id="ckbox-file-uploads"
+                />
+                <label for="ckbox-file-uploads">File Uploads</label>
+              </div>
+              <br />
+
+              <div id="assignment-attempts">
+                <label for="submision-attempts-options">
+                  Submission Attempts
+                </label>
+                <br />
+                <select id="submision-attempts-options">
+                  <option value="UNLIMITED" selected>Unlimited</option>
+                </select>
+              </div>
+              <br />
+
+              <div id="assignment-plagiarism">
+                <label for="plagiarism-review-options">
+                  Plagiarism Review
+                </label>
+                <br />
+                <select id="plagiarism-review-options">
+                  <option value="NONE" selected>None</option>
+                </select>
+              </div>
+              <br />
+
+              <div id="assignment-group-assignment">
+                <label for="">Group Assignment</label>
+                <br />
+                <input type="checkbox" id="ckbox-group-assignment" />
+                <label for="ckbox-group-assignment"
+                  >This is a group assignment</label
+                >
+              </div>
+              <br />
+
+              <div id="assignment-peer-reviews">
+                <label for="">Peer Reviews</label>
+                <br />
+                <input type="checkbox" id="ckbox-peer-reviews" />
+                <label for="ckbox-peer-reviews">Require Peer Reviews</label>
+              </div>
+              <br />
+
+              <div id="assignment-assign-to">
+                <label for="assignment-assign-to-input">Assign to</label>
+                <br />
+                <input
+                  type="text"
+                  id="assignment-assign-to-input"
+                  value="Everyone"
+                />
+              </div>
+              <br />
+
+              <div id="assignment-dates">
+                <label for="assignment-dates-due"> Due </label>
+                <br />
+                <input
+                  type="date"
+                  id="assignment-dates-due"
+                  value="2021-01-01"
+                />
+                <br />
+                <br />
+
+                <label for="assignment-dates-from"> Available from </label>
+                <br />
+                <input
+                  type="date"
+                  id="assignment-dates-from"
+                  value="2021-01-01"
+                />
+                <br />
+                <br />
+
+                <label for="assignment-dates-until"> Until </label>
+                <br />
+                <input
+                  type="date"
+                  id="assignment-dates-until"
+                  value="2021-01-01"
+                />
+                <br />
+                <br />
+              </div>
+
+              <div id="assignment-form-submision-buttons">
+                <button>Cancel</button>
+                <button>Save</button>
+              </div>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

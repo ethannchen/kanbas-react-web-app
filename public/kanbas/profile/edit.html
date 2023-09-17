@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Profile</title>
+  </head>
+
+  <body>
+    <table>
+      <tbody valign="top">
+        <tr>
+          <!-- First column: Kanbas Navigation -->
+          <td>
+            <ul>
+              <li><a href="../navigation-page/account-nav.html">Account</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="../navigation-page/course-nav.html">Courses</a></li>
+              <li><a href="#">Calendar</a></li>
+              <li><a href="#">Inbox</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Studio</a></li>
+              <li><a href="#">Commons</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </td>
+          <!-- Second column: Account Navigation -->
+          <td>
+            <ul>
+              <li><a href="#">Notifications</a></li>
+              <li><a href="./index.html">Profile</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">ePortfolios</a></li>
+              <li><a href="#">Shared Content</a></li>
+              <li><a href="#">The Hub</a></li>
+              <li><a href="#">Qwickly Course Tools</a></li>
+              <li><a href="#">Global Announcements</a></li>
+            </ul>
+          </td>
+          <!-- Third column -->
+          <td>
+            <form action="./index.html" id="profile-edit-form">
+              <div id="name-section">
+                <h1>Yichen Yan</h1>
+                <label for="profile-edit-name">Name:* </label>
+                <input type="text" id="profile-edit-name" value="Yichen Yan" />
+                <label for="profile-edit-pronouns">Pronouns: </label>
+                <select id="profile-edit-pronouns">
+                  <option value="NONE" selected>None</option>
+                </select>
+                <br /><br />
+                <label for="profile-edit-title">Title: </label>
+                <input type="text" name="title" id="profit-edit-title" />
+              </div>
+
+              <div id="contact-section">
+                <h2>Contact</h2>
+                No registered services, you can add some on the
+                <a href="#">settings</a> page.
+              </div>
+
+              <div id="biography-section">
+                <h2>Biography</h2>
+                <label for="profile-edit-biography"
+                  >Student, Web Developer.</label
+                >
+                <br />
+                <textarea id="profile-edit-biography" cols="50" rows="5">
+Student, Web Developer.</textarea
+                >
+              </div>
+
+              <div id="links-section">
+                <h2>Links</h2>
+                <ul>
+                  <li>
+                    <a href="https://www.youtube.com/">YouTube</a> Links to an
+                    external site.
+                  </li>
+                </ul>
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>Title</th>
+                      <th></th>
+                      <th>URL</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input
+                          type="text"
+                          id="profile-edit-links-title"
+                          value="YouTube"
+                        />
+                      </td>
+                      <td>&rarr;</td>
+                      <td>
+                        <input
+                          type="text"
+                          id="profile-edit-links-url"
+                          value="https://www.youtube.com/"
+                        />
+                      </td>
+                      <td><a href="#">Remove</a></td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="4">
+                        <button>Add another link</button>
+                        <br />
+                        <button>Cancel</button>
+                        <button>Save Profile</button>
+                        <br />
+                        <button>Edit Profile</button>
+                        <button>Cancel Editing</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

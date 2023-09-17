@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grades</title>
+  </head>
+
+  <body>
+    <table width="100%">
+      <tbody valign="top">
+        <tr>
+          <!-- First column: Kanbas Navigation -->
+          <td>
+            <ul>
+              <li><a href="./navigation-page/account-nav.html">Account</a></li>
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="./navigation-page/course-nav.html">Courses</a></li>
+              <li><a href="#">Calendar</a></li>
+              <li><a href="#">Inbox</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Studio</a></li>
+              <li><a href="#">Commons</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+          </td>
+          <!-- Second column: Course Navigation -->
+          <td>
+            <ul>
+              <li><a href="./home.html">Home</a></li>
+              <li><a href="#">Modules</a></li>
+              <li><a href="#">Piazza</a></li>
+              <li><a href="#">Zoom Meetings</a></li>
+              <li><a href="./assignments/index.html">Assignments</a></li>
+              <li><a href="#">Quizzes</a></li>
+              <li><a href="./grades.html">Grades</a></li>
+              <li><a href="#">People</a></li>
+              <li><a href="#">Panopto Video</a></li>
+              <li><a href="#">Discussions</a></li>
+              <li><a href="#">Announcements</a></li>
+              <li><a href="#">Pages</a></li>
+              <li><a href="#">Files</a></li>
+              <li><a href="#">Rubrics</a></li>
+              <li><a href="#">Outcomes</a></li>
+              <li><a href="#">Collaborations</a></li>
+              <li><a href="#">Syllabus</a></li>
+              <li><a href="./settings/index.html">Settings</a></li>
+            </ul>
+          </td>
+
+          <!-- Third column -->
+          <td>
+            <div id="grades-import-and-export">
+              <select id="grade-source-options">
+                <option value="GRADEBOOK">Gradebook</option>
+                <option value="OTHER">Other</option>
+              </select>
+              <button>Import</button>
+              <select id="grade-configure-options">
+                <option value="EXPORT" selected>Export</option>
+                <option value="RESET">Reset</option>
+              </select>
+              <button>Configure</button>
+            </div>
+
+            <div id="grades-filter-forms">
+              <h3>Student Names</h3>
+              <input
+                type="text"
+                name="filter-grades"
+                id="filter-by-student-name"
+                placeholder="Search Students"
+              />
+              <h3>Assignment Names</h3>
+              <input
+                type="text"
+                name="filter-grades"
+                id="filter-by-assignment-name"
+                placeholder="Search Assignments"
+              />
+            </div>
+
+            <div id="grades-filter-buttons">
+              <br />
+              <button>Apply Filters</button>
+            </div>
+            <br />
+
+            <div id="grades-table">
+              <table border="1" width="100%">
+                <thead>
+                  <tr>
+                    <th>Student Name</th>
+                    <th>A1 SETUP Out of 100</th>
+                    <th>A2 HTML Out of 100</th>
+                    <th>A3 CSS Out of 100</th>
+                    <th>A4 BOOTSTRAP Out of 100</th>
+                  </tr>
+                </thead>
+                <tbody align="center">
+                  <tr>
+                    <td>Alice Wonderland</td>
+                    <td>98</td>
+                    <td>89</td>
+                    <td>87</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td>Princess Leia</td>
+                    <td>98</td>
+                    <td>80</td>
+                    <td>87</td>
+                    <td>86</td>
+                  </tr>
+                  <tr>
+                    <td>Luke Skywalker</td>
+                    <td>
+                      <input
+                        type="number"
+                        value="98"
+                        max="100"
+                        min="0"
+                        style="text-align: right;"
+                      />
+                    </td>
+                    <td>89</td>
+                    <td>87</td>
+                    <td>90</td>
+                  </tr>
+                  <tr>
+                    <td>Han Solo</td>
+                    <td>83</td>
+                    <td><input
+                        type="number"
+                        value="99"
+                        max="100"
+                        min="0"
+                        style="text-align: right;"
+                      /></td>
+                    <td>94</td>
+                    <td>98</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

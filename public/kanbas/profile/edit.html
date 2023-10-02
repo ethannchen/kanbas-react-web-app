@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -13,110 +21,272 @@
         <tr>
           <!-- First column: Kanbas Navigation -->
           <td>
-            <ul>
-              <li><a href="../navigation-page/account-nav.html">Account</a></li>
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="../navigation-page/course-nav.html">Courses</a></li>
-              <li><a href="#">Calendar</a></li>
-              <li><a href="#">Inbox</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Studio</a></li>
-              <li><a href="#">Commons</a></li>
-              <li><a href="#">Help</a></li>
-            </ul>
+            <div class="list-group bg-dark m-1 small" style="width: 85px">
+              <a
+                href="../home.html"
+                class="list-group-item list-group-item-action bg-dark text-red d-flex flex-column align-items-center"
+              >
+                <i class="fa-solid fa-n fa-3x" style="color: red"></i>
+                <span></span>
+              </a>
+
+              <a
+                href="../profile/index.html"
+                class="list-group-item list-group-item-action bg-light text-red d-flex flex-column align-items-center"
+              >
+                <i class="fa-solid fa-user fa-2x" style="color: darkgray"></i>
+                <span>Account</span>
+              </a>
+              <a
+                href="../dashboard/index.html"
+                class="list-group-item list-group-item-action bg-dark text-light d-flex flex-column align-items-center"
+              >
+                <i class="fa-solid fa-gauge" style="color: red"></i>
+                <span>Dashboard</span>
+              </a>
+              <a
+                href="../navigation-page/course-nav.html"
+                class="list-group-item list-group-item-action bg-dark text-light d-flex flex-column align-items-center"
+              >
+                <i class="fa-solid fa-book" style="color: red"></i>
+                <span>Courses</span>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action bg-dark text-light d-flex flex-column align-items-center"
+              >
+                <i class="fa-solid fa-calendar" style="color: red"></i>
+                <span>Calendar</span>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action bg-dark text-light d-flex flex-column align-items-center"
+              >
+                <i class="fa-solid fa-inbox" style="color: red"></i>
+                <span>Inbox</span>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action bg-dark text-light d-flex flex-column align-items-center"
+              >
+                <i class="fa-solid fa-history" style="color: red"></i>
+                <span>History</span>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action bg-dark text-light d-flex flex-column align-items-center"
+              >
+                <i class="fa-solid fa-comment" style="color: red"></i>
+                <span>Studio</span>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action bg-dark text-light d-flex flex-column align-items-center"
+              >
+                <i class="fa-solid fa-sign-out" style="color: red"></i>
+                <span>Commons</span>
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action bg-dark text-light d-flex flex-column align-items-center"
+              >
+                <i class="fa-solid fa-question-circle" style="color: red"></i>
+                <span>Help</span>
+              </a>
+            </div>
           </td>
           <!-- Second column: Account Navigation -->
-          <td>
-            <ul>
-              <li><a href="#">Notifications</a></li>
-              <li><a href="./index.html">Profile</a></li>
-              <li><a href="#">Files</a></li>
-              <li><a href="#">Settings</a></li>
-              <li><a href="#">ePortfolios</a></li>
-              <li><a href="#">Shared Content</a></li>
-              <li><a href="#">The Hub</a></li>
-              <li><a href="#">Qwickly Course Tools</a></li>
-              <li><a href="#">Global Announcements</a></li>
-            </ul>
+          <td
+            class="list-group"
+            style="width: 190px; margin-left: 20px; margin-right: 20px"
+          >
+            <div>
+              <a
+                class="list-group-item list-group-item-action bg-white border-0 text-danger"
+                href="#"
+                >Notifications</a
+              >
+              <a
+                class="list-group-item list-group-item-action bg-white text-dark"
+                href="../profile/index.html"
+                style="border: 0; border-left: 2px solid black"
+                >Profile</a
+              >
+              <a
+                class="list-group-item list-group-item-action bg-white border-0 text-danger"
+                href="#"
+                >Files</a
+              >
+              <a
+                class="list-group-item list-group-item-action bg-white border-0 text-danger"
+                href="#"
+                >Settings</a
+              >
+              <a
+                class="list-group-item list-group-item-action bg-white border-0 text-danger"
+                href="#"
+                >ePortfolios</a
+              >
+              <a
+                class="list-group-item list-group-item-action bg-white border-0 text-danger"
+                href="#"
+                >Shared Content</a
+              >
+              <a
+                class="list-group-item list-group-item-action bg-white border-0 text-danger"
+                href="#"
+                >The Hub</a
+              >
+              <a
+                class="list-group-item list-group-item-action bg-white border-0 text-danger"
+                href="#"
+                >Qwickly Course Tools</a
+              >
+              <a
+                class="list-group-item list-group-item-action bg-white border-0 text-danger"
+                href="#"
+                >Global Announcements</a
+              >
+            </div>
           </td>
           <!-- Third column -->
           <td>
+            <div id="profile-header">
+              <h3>Yichen Yan's Profile</h3>
+              <hr />
+            </div>
+
             <form action="./index.html" id="profile-edit-form">
-              <div id="name-section">
+              <i class="fa fa-user fa-8x" aria-hidden="true"></i>
+              <button class="btn btn-outline-secondary float-end">
+                <i class="fa fa-pencil fa-1x"></i> Cancel Editing
+              </button>
+
+              <div id="name-section" class="mb-4">
                 <h1>Yichen Yan</h1>
-                <label for="profile-edit-name">Name:* </label>
-                <input type="text" id="profile-edit-name" value="Yichen Yan" />
-                <label for="profile-edit-pronouns">Pronouns: </label>
-                <select id="profile-edit-pronouns">
+                <label for="profile-edit-name" class="form-label"
+                  >Name:*
+                </label>
+                <input
+                  class="form-control"
+                  id="profile-edit-name"
+                  value="Yichen Yan"
+                />
+                <label class="form-label mt-3" for="profile-edit-pronouns"
+                  >Pronouns:
+                </label>
+                <select id="profile-edit-pronouns" class="form-select">
                   <option value="NONE" selected>None</option>
                 </select>
-                <br /><br />
-                <label for="profile-edit-title">Title: </label>
-                <input type="text" name="title" id="profit-edit-title" />
+                <label class="form-label mt-3" for="profile-edit-title"
+                  >Title:
+                </label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="title"
+                  id="profit-edit-title"
+                />
               </div>
 
-              <div id="contact-section">
+              <div id="contact-section" class="mb-4">
                 <h2>Contact</h2>
                 No registered services, you can add some on the
-                <a href="#">settings</a> page.
+                <a href="#" class="text-danger" style="text-decoration: none"
+                  >settings</a
+                >
+                page.
               </div>
 
-              <div id="biography-section">
+              <div id="biography-section" class="mb-4">
                 <h2>Biography</h2>
-                <label for="profile-edit-biography"
+                <label class="form-label" for="profile-edit-biography"
                   >Student, Web Developer.</label
                 >
                 <br />
-                <textarea id="profile-edit-biography" cols="50" rows="5">
+                <textarea
+                  class="form-control"
+                  id="profile-edit-biography"
+                  cols="50"
+                  rows="5"
+                >
 Student, Web Developer.</textarea
                 >
               </div>
 
-              <div id="links-section">
+              <div id="links-section" class="mb-4">
                 <h2>Links</h2>
                 <ul>
                   <li>
-                    <a href="https://www.youtube.com/">YouTube</a> Links to an
-                    external site.
+                    <a
+                      href="https://www.youtube.com/"
+                      class="text-danger"
+                      style="text-decoration: none"
+                      >YouTube</a
+                    >
+                    Links to an external site.
                   </li>
                 </ul>
+
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col text-center fw-bold">Title</div>
+                    <div class="col text-center fw-bold">URL</div>
+                  </div>
+                  <div class="row">
+                    <div
+                      class="col d-flex align-items-center justify-content-start"
+                    >
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="profile-edit-links-title"
+                        value="YouTube"
+                      />
+                      <i class="fas fa-arrow-right" style="color: black"></i>
+                    </div>
+                    <div class="col d-flex align-items-center justify-content-between">
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="profile-edit-links-url"
+                        value="https://www.youtube.com/"
+                      />
+                      <a href="#"
+                        ><i class="fas fa-x" style="color: red"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-outline-secondary ms-2 mt-2">
+                  Add another link
+                </button>
+                <hr />
+                <div class="float-end mb-3">
+                  <button class="btn btn-outline-secondary">Cancel</button>
+                  <button class="btn btn-danger">Save Profile</button>
+                </div>
+
                 <table>
                   <tbody>
                     <tr>
-                      <th>Title</th>
                       <th></th>
-                      <th>URL</th>
+                      <th></th>
+                      <th></th>
                       <th></th>
                     </tr>
                     <tr>
-                      <td>
-                        <input
-                          type="text"
-                          id="profile-edit-links-title"
-                          value="YouTube"
-                        />
-                      </td>
-                      <td>&rarr;</td>
-                      <td>
-                        <input
-                          type="text"
-                          id="profile-edit-links-url"
-                          value="https://www.youtube.com/"
-                        />
-                      </td>
-                      <td><a href="#">Remove</a></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
 
                     <tr>
-                      <td colspan="4">
-                        <button>Add another link</button>
-                        <br />
-                        <button>Cancel</button>
-                        <button>Save Profile</button>
-                        <br />
-                        <button>Edit Profile</button>
-                        <button>Cancel Editing</button>
-                      </td>
+                      <td colspan="4"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4"></td>
                     </tr>
                   </tbody>
                 </table>

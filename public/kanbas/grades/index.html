@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <table width="100%">
+    <table>
       <tbody valign="top">
         <tr>
           <!-- First column: Kanbas Navigation -->
@@ -23,7 +23,7 @@
             <!-- <ul>
               <li><a href="../navigation-page/account-nav.html">Account</a></li>
               <li><a href="#">Dashboard</a></li>
-              <li><a href="../navigation-page/course-nav.html">Courses</a></li>
+              <li><a href="../courses/index.html">Courses</a></li>
               <li><a href="#">Calendar</a></li>
               <li><a href="#">Inbox</a></li>
               <li><a href="#">History</a></li>
@@ -34,8 +34,8 @@
 
             <div class="list-group bg-dark m-1 small" style="width: 85px">
               <a
-              href="../home.html"
-              class="list-group-item list-group-item-action bg-dark text-red d-flex flex-column align-items-center"
+                href="../home.html"
+                class="list-group-item list-group-item-action bg-dark text-red d-flex flex-column align-items-center"
               >
                 <i class="fa-solid fa-n fa-3x" style="color: red"></i>
                 <span></span>
@@ -56,7 +56,7 @@
                 <span>Dashboard</span>
               </a>
               <a
-                href="../navigation-page/course-nav.html"
+                href="../courses/index.html"
                 class="list-group-item list-group-item-action bg-white text-danger border-0 d-flex flex-column align-items-center"
               >
                 <i class="fa-solid fa-book" style="color: red"></i>
@@ -109,7 +109,10 @@
 
           <!-- Second column: Course Navigation -->
 
-          <td class="list-group" style="width: 190px; margin-left: 20px; margin-right: 20px">
+          <td
+            class="list-group"
+            style="width: 190px; margin-left: 20px; margin-right: 20px"
+          >
             <div>
               <a
                 class="list-group-item list-group-item-action bg-white text-danger border-0"
@@ -214,143 +217,141 @@
           </td>
 
           <!-- Third column -->
-          <td class="me-4">
+          <td >
             <div class="me-4" id="column3">
-            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="#" class="text-danger" style="text-decoration: none"
-                    >CS5610.20040.202310</a
-                  >
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Grades
-                </li>
-              </ol>
-            </nav>
-            <hr />
-            <div id="grades-button-group" class="d-flex justify-content-end">
-              <button class="btn btn-secondary me-2">
-                <i class="fas fa-file-import me-2"></i>Import
-              </button>
-              <button class="btn btn-secondary me-2">
-                <i class="fas fa-file-export me-2"></i>Export
-              </button>
-              <button class="btn btn-secondary">
-                <i class="fas fa-gear"></i>
-              </button>
-            </div>
+              <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a
+                      href="#"
+                      class="text-danger"
+                      style="text-decoration: none"
+                      >CS5610.20040.202310</a
+                    >
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    Grades
+                  </li>
+                </ol>
+              </nav>
+              <hr />
+              <div id="grades-button-group" class="d-flex justify-content-end">
+                <button class="btn btn-secondary me-2">
+                  <i class="fas fa-file-import me-2"></i>Import
+                </button>
+                <button class="btn btn-secondary me-2">
+                  <i class="fas fa-file-export me-2"></i>Export
+                </button>
+                <button class="btn btn-secondary">
+                  <i class="fas fa-gear"></i>
+                </button>
+              </div>
 
-            <div class="row mt-3">
-              <div class="col h6">Student Names</div>
-              <div class="col h6">Assignment Names</div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="input-group">
-                  <span class="input-group-text bg-white"
-                    ><i class="fas fa-search"></i
-                  ></span>
-                  <input
-                    type="text"
-                    name="filter-grades"
-                    id="filter-by-student-name"
-                    placeholder="Search Students"
-                    class="form-control"
-                  />
+              <div class="row mt-3">
+                <div class="col h6">Student Names</div>
+                <div class="col h6">Assignment Names</div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="input-group">
+                    <span class="input-group-text bg-white"
+                      ><i class="fas fa-search"></i
+                    ></span>
+                    <input
+                      type="text"
+                      name="filter-grades"
+                      id="filter-by-student-name"
+                      placeholder="Search Students"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="input-group">
+                    <span class="input-group-text bg-white"
+                      ><i class="fas fa-search"></i
+                    ></span>
+                    <input
+                      type="text"
+                      name="filter-grades"
+                      id="filter-by-assignment-name"
+                      placeholder="Search Assignments"
+                      class="form-control"
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="input-group">
-                  <span class="input-group-text bg-white"
-                    ><i class="fas fa-search"></i
-                  ></span>
-                  <input
-                    type="text"
-                    name="filter-grades"
-                    id="filter-by-assignment-name"
-                    placeholder="Search Assignments"
-                    class="form-control"
-                  />
-                </div>
+
+              <div id="grades-filter-buttons" class="">
+                <button class="btn btn-secondary mt-3 mb-3">
+                  <i class="fas fa-filter me-2"></i>Apply Filters
+                </button>
               </div>
+
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead class="text-center">
+                    <tr>
+                      <th>Student Name</th>
+                      <th>A1 SETUP Out of 100</th>
+                      <th>A2 HTML Out of 100</th>
+                      <th>A3 CSS Out of 100</th>
+                      <th>A4 BOOTSTRAP Out of 100</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-center">
+                    <tr>
+                      <td class="text-danger text-start">Alice Wonderland</td>
+                      <td>98%</td>
+                      <td>89%</td>
+                      <td>87%</td>
+                      <td>90%</td>
+                    </tr>
+                    <tr>
+                      <td class="text-danger text-start">Princess Leia</td>
+                      <td>98%</td>
+                      <td>80%</td>
+                      <td>87%</td>
+                      <td>86%</td>
+                    </tr>
+                    <tr>
+                      <td class="text-danger text-start">Luke Skywalker</td>
+                      <td>
+                        <div class="input-group">
+                          <input value="98%" class="form-control text-center" />
+
+                          <span class="input-group-text"
+                            ><i class="fas fa-arrow-right-from-bracket"></i
+                          ></span>
+                        </div>
+                      </td>
+                      <td>89%</td>
+                      <td>87%</td>
+                      <td>90%</td>
+                    </tr>
+                    <tr>
+                      <td class="text-danger text-start">Han Solo</td>
+                      <td>83%</td>
+                      <td>
+                        <div class="input-group">
+                          <input value="99%" class="form-control text-center" />
+
+                          <span class="input-group-text"
+                            ><i class="fas fa-arrow-right-from-bracket"></i
+                          ></span>
+                        </div>
+                      </td>
+                      <td>94%</td>
+                      <td>98%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
             </div>
-
-            <div id="grades-filter-buttons" class="">
-              <button class="btn btn-secondary mt-3 mb-3"><i class="fas fa-filter me-2"></i>Apply Filters</button>
-            </div>
-
-            
-
-
-
-
-            <div id="grades-table">
-              <table class="table table-striped" border="1" width="100%">
-                <thead class="text-center">
-                  <tr>
-                    <th>Student Name</th>
-                    <th>A1 SETUP Out of 100</th>
-                    <th>A2 HTML Out of 100</th>
-                    <th>A3 CSS Out of 100</th>
-                    <th>A4 BOOTSTRAP Out of 100</th>
-                  </tr>
-                </thead>
-                <tbody class="text-center">
-                  <tr>
-                    <td class="text-danger">Alice Wonderland</td>
-                    <td>98%</td>
-                    <td>89%</td>
-                    <td>87%</td>
-                    <td>90%</td>
-                  </tr>
-                  <tr>
-                    <td class="text-danger">Princess Leia</td>
-                    <td>98%</td>
-                    <td>80%</td>
-                    <td>87%</td>
-                    <td>86%</td>
-                  </tr>
-                  <tr>
-                    <td class="text-danger">Luke Skywalker</td>
-                    <td>
-                      <div class="input-group">
-                        <input
-                        value="98%"
-                        class="form-control text-center"
-                      />
-                      
-                      <span class="input-group-text"><i class="fas fa-arrow-right-from-bracket "></i></span>
-                      </div>
-                      
-                    </td>
-                    <td>89%</td>
-                    <td>87%</td>
-                    <td>90%</td>
-                  </tr>
-                  <tr>
-                    <td class="text-danger">Han Solo</td>
-                    <td>83%</td>
-                    <td>
-                      <div class="input-group">
-                        <input
-                        value="99%"
-                        class="form-control text-center"
-                      />
-                      
-                      <span class="input-group-text"><i class="fas fa-arrow-right-from-bracket "></i></span>
-                      </div>
-                    </td>
-                    <td>94%</td>
-                    <td>98%</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div></td>
+          </td>
         </tr>
       </tbody>
     </table>
   </body>
 </html>
- 

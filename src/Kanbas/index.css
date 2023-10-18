@@ -1,0 +1,6 @@
+.sub-nav-active{
+    border: 0; border-left: 2px solid black
+}
+.sub-nav-inactive{
+    border: 0; 
+}

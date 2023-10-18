@@ -7,7 +7,7 @@ function CourseNavigation() {
   return (
     <div
       className="list-group"
-      style={{ width: 150, marginLeft: 20, marginRight: 20 }}
+      style={{ width: 150}}
     >
       {links.map((link, index) => (
         <Link

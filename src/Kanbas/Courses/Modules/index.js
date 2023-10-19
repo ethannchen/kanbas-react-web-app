@@ -4,8 +4,7 @@ import { faPlus, faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 
 function Modules() {
   return (
-    <div className="me-4">
-      <h2>Modules</h2>
+    <div className="m-3">
       <div id="home-screen-buttons  ">
         <div className="d-flex justify-content-end mb-4">
           <button className="btn btn-secondary float-end me-1">

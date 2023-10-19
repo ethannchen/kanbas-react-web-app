@@ -52,7 +52,7 @@ function KanbasNavigation() {
   return (
     <div
       className="list-group bg-dark m-0 p-0 rounded-0 small"
-      style={{ width: "85px" }}
+      style={{ width: "100px" }}
     >
       {links.map((link, index) => (
         <Link

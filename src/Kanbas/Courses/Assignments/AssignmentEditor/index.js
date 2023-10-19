@@ -22,14 +22,14 @@ function AssignmentEditor() {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
-    <div>
+    <div className="m-3">
       <div className="d-flex flex-row justify-content-end">
-        
         <div id="button-group" className="">
           <button className="btn  me-1 text-success">
-          <FontAwesomeIcon icon={faCircleCheck} style={{color:"green"}}/> Published
+            <FontAwesomeIcon icon={faCircleCheck} style={{ color: "green" }} />{" "}
+            Published
           </button>
-          
+
           <button className="btn btn-secondary me-1">
             <FontAwesomeIcon icon={faEllipsisVertical} />
           </button>

@@ -20,11 +20,11 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const [empty, kanbas, courses, id, screen] = pathname.split("/");
-  const course = db.courses.find((course) => course._id === courseId);
+  const [empty, kanbas, _course, id, screen] = pathname.split("/");
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div className="ms-4 mt-2 mb-0 ">
       <div className="d-flex flow-row align-text-center">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import db from "../../../Database";
 import { Link } from "react-router-dom";
@@ -35,24 +35,26 @@ function AssignmentEditor() {
   // );
   const dispatch = useDispatch();
 
-  if (assignmentId !== "new") {
-    dispatch(
-      setAssignment(
-        assignments.find((assignment) => assignment._id === assignmentId)
-      )
-    );
-  } else {
-    dispatch(
-      setAssignment({
-        title: "New Assignment",
-        description: "New Assignment Description",
-        points: "100",
-        dueDate: "",
-        availableFromDate: "",
-        availableUntilDate: "",
-      })
-    );
-  }
+  useEffect(() => {
+    if (assignmentId === "new") {
+      dispatch(
+        setAssignment({
+          title: "New Assignment",
+          description: "New Assignment Description",
+          points: "100",
+          dueDate: "",
+          availableFromDate: "",
+          availableUntilDate: "",
+        })
+      );
+    } else {
+      dispatch(
+        setAssignment(
+          assignments.find((assignment) => assignment._id === assignmentId)
+        )
+      );
+    }
+  }, []);
 
   const handleSave = () => {
     if (assignmentId === "new") {
@@ -186,7 +188,7 @@ function AssignmentEditor() {
         </div>
       </div>
 
-      <div class="float-end">
+      <div className="float-end">
         <Link
           to={`/Kanbas/Courses/${courseId}/Assignments`}
           className="btn btn-secondary me-2"

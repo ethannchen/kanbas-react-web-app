@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,6 +14,7 @@ import {
   updateAssignment,
   setAssignment,
 } from "./assignmentsReducer";
+import DeleteConfirmation from "./DeleteConfirmation";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -28,8 +29,48 @@ function Assignments() {
     (state) => state.assignmentsReducer.assignment
   );
   const dispatch = useDispatch();
+
+  const [showModal, setShowModal] = useState(false);
+  const [assignmentId, setAssignmentId] = useState(null);
+
+  const handleDeleteClick = (e, id) => {
+    setAssignmentId(id);
+    setShowModal(true);
+    console.log("click " + assignmentId );
+    e.preventDefault();
+  };
+
+  // const handleConfirmDelete = (id) => {
+  //   dispatch(deleteAssignment(id));
+  //   setAssignmentId(null);
+  //   setShowModal(false);    
+  //   console.log("delete " + id);
+
+  // };
+  const handleConfirmDelete = () => {
+    dispatch(deleteAssignment(assignmentId));
+    setAssignmentId(null);
+    setShowModal(false);    
+    console.log("delete " + assignmentId);
+
+  };
+
+  const handleCancelDelete = () => {
+    setAssignmentId(null);
+    setShowModal(false);
+    console.log("cancel " + assignmentId);
+
+  };
+
   return (
     <div className="m-3">
+      <DeleteConfirmation
+        showModal={showModal}
+        hideModal={handleCancelDelete}
+        confirmModal={handleConfirmDelete}
+        message="Are you sure you want to delete this assignment?"
+      />
+
       <div className="d-flex flex-row justify-content-between">
         <input
           type="text"
@@ -45,9 +86,9 @@ function Assignments() {
             Assignment
           </button> */}
           <Link
-            
             to={`/Kanbas/Courses/${courseId}/Assignments/new`}
-            className="btn btn-danger me-1">          
+            className="btn btn-danger me-1"
+          >
             <FontAwesomeIcon icon={faPlus} />
             Assignment
           </Link>
@@ -86,7 +127,7 @@ function Assignments() {
             >
               {assignment.title}
               <div className="float-end">
-                <button
+                {/* <button
                   className="btn btn-danger m-1 "
                   onClick={(e) => {
                     e.preventDefault();
@@ -94,7 +135,15 @@ function Assignments() {
                   }}
                 >
                   Delete
+                </button> */}
+
+                <button
+                  className="btn btn-danger m-1 "
+                  onClick={(e) => handleDeleteClick(e, assignment._id)}
+                >
+                  Delete
                 </button>
+
                 <FontAwesomeIcon
                   icon={faCircleCheck}
                   style={{ color: "green" }}

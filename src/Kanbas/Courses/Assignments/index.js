@@ -40,17 +40,17 @@ function Assignments() {
           <button className="btn btn-secondary me-1">
             <FontAwesomeIcon icon={faPlus} /> Group
           </button>
-          <button className="btn btn-danger me-1">
+          {/* <button className="btn btn-danger me-1">
             <FontAwesomeIcon icon={faPlus} />
             Assignment
-          </button>
-          {/* <Link
+          </button> */}
+          <Link
             
-            to={`/Kanbas/Courses/${courseId}/Assignments/`}
+            to={`/Kanbas/Courses/${courseId}/Assignments/new`}
             className="btn btn-danger me-1">          
             <FontAwesomeIcon icon={faPlus} />
             Assignment
-          </Link> */}
+          </Link>
           <button className="btn btn-secondary me-1">
             <FontAwesomeIcon icon={faEllipsisVertical} />
           </button>

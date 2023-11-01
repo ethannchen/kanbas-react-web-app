@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import db from "../../../Database";
 import { Link } from "react-router-dom";
@@ -8,17 +8,36 @@ import {
   faEllipsisVertical,
   faCircleCheck,
 } from "@fortawesome/free-solid-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  // setAssignment,
+} from "../assignmentsReducer";
 
 function AssignmentEditor() {
-  const { assignmentId } = useParams();
-  const assignment = db.assignments.find(
-    (assignment) => assignment._id === assignmentId
-  );
-
   const { courseId } = useParams();
+  const { assignmentId } = useParams();
   const navigate = useNavigate();
+  // const assignment = db.assignments.find(
+  //   (assignment) => assignment._id === assignmentId
+  // );
+
+  const assignments = useSelector(
+    (state) => state.assignmentsReducer.assignments
+  );
+  // const assignment = useSelector(
+  //   (state) => state.assignmentsReducer.assignment
+  // );
+  const [assignment, setAssignment] = useState(
+    assignments.find((assignment) => assignment._id === assignmentId)
+  );
+  const dispatch = useDispatch();
+
   const handleSave = () => {
     console.log("Actually saving assignment TBD in later assignments");
+    dispatch(updateAssignment(assignment));
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   return (
@@ -39,7 +58,14 @@ function AssignmentEditor() {
       <hr />
 
       <h6>Assignment Name</h6>
-      <input value={assignment.title} className="form-control mb-2" />
+      <input
+        value={assignment.title}
+        onChange={(e) =>
+          // dispatch(setAssignment({ ...assignment, title: e.target.value }))
+          setAssignment({ ...assignment, title: e.target.value })
+        }
+        className="form-control mb-2"
+      />
 
       <div class="float-end">
         <Link

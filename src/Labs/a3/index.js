@@ -13,13 +13,6 @@ function Assignment3() {
   return (
     <div className="container">
       <h1>Assignment 3</h1>
-      <JavaScript />
-      <PathParameters />
-      <DynamicStyling />
-      <Classes />
-      <Styles />
-      <ConditionalOutput />
-      <Todo />
       <h1>Assignment 4: todoList preview</h1>
       <ul className="list-group">
         {todos.map((todo) => (
@@ -28,6 +21,13 @@ function Assignment3() {
           </li>
         ))}
       </ul>
+      <JavaScript />
+      <PathParameters />
+      <DynamicStyling />
+      <Classes />
+      <Styles />
+      <ConditionalOutput />
+      <Todo />
     </div>
   );
 }

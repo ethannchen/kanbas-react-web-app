@@ -19,12 +19,25 @@ import {
   faCircleCheck,
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Courses({ courses }) {
+  const URL = "http://localhost:4000/api/courses";
   const { courseId } = useParams();
   const { pathname } = useLocation();
   const [empty, kanbas, _course, id, screen] = pathname.split("/");
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(`${URL}/${courseId}`);
+    setCourse(response.data);
+  };
+
+  // const course = courses.find((course) => course._id === courseId);
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   return (
     <div className="ms-4 mt-2 mb-0 ">
       <div className="d-flex flow-row align-text-center">

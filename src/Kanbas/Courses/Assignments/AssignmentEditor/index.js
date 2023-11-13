@@ -15,6 +15,7 @@ import {
   updateAssignment,
   setAssignment,
 } from "../assignmentsReducer";
+import * as client from "../client";
 
 function AssignmentEditor() {
   const { courseId } = useParams();
@@ -34,6 +35,18 @@ function AssignmentEditor() {
   //   assignments.find((assignment) => assignment._id === assignmentId)
   // );
   const dispatch = useDispatch();
+
+  const handleAddAssignment = () => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
+      // dispatch(addAssignment(module));
+      dispatch(addAssignment({ ...assignment, course: courseId }));
+    });
+  };
+
+  const handleUpdateAssignment = async () => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
 
   useEffect(() => {
     if (assignmentId === "new") {
@@ -59,10 +72,12 @@ function AssignmentEditor() {
   const handleSave = () => {
     if (assignmentId === "new") {
       console.log("Add a new assignment");
-      dispatch(addAssignment({ ...assignment, course: courseId }));
+      // dispatch(addAssignment({ ...assignment, course: courseId }));
+      handleAddAssignment();
     } else {
       console.log("Actually saving assignment TBD in later assignments");
-      dispatch(updateAssignment(assignment));
+      // dispatch(updateAssignment(assignment));
+      handleUpdateAssignment();
     }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,12 +9,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import {
+  setAssignments,
   addAssignment,
   deleteAssignment,
   updateAssignment,
   setAssignment,
 } from "./assignmentsReducer";
 import DeleteConfirmation from "./DeleteConfirmation";
+import * as client from "./client";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -36,31 +38,53 @@ function Assignments() {
   const handleDeleteClick = (e, id) => {
     setAssignmentId(id);
     setShowModal(true);
-    console.log("click " + assignmentId );
+    console.log("click " + assignmentId);
     e.preventDefault();
   };
 
   // const handleConfirmDelete = (id) => {
   //   dispatch(deleteAssignment(id));
   //   setAssignmentId(null);
-  //   setShowModal(false);    
+  //   setShowModal(false);
   //   console.log("delete " + id);
 
   // };
   const handleConfirmDelete = () => {
-    dispatch(deleteAssignment(assignmentId));
+    // dispatch(deleteAssignment(assignmentId));
+    handleDeleteAssignment(assignmentId);
     setAssignmentId(null);
-    setShowModal(false);    
+    setShowModal(false);
     console.log("delete " + assignmentId);
-
   };
 
   const handleCancelDelete = () => {
     setAssignmentId(null);
     setShowModal(false);
     console.log("cancel " + assignmentId);
-
   };
+
+  useEffect(() => {
+    client
+      .findAssignmentsForCourse(courseId)
+      .then((modules) => dispatch(setAssignments(modules)));
+  }, [courseId, dispatch]);
+
+  // const handleAddAssignment = () => {
+  //   client.createAssignment(courseId, module).then((module) => {
+  //     dispatch(addAssignment(module));
+  //   });
+  // };
+
+  const handleDeleteAssignment = (assignmentId) => {
+    client.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
+
+  // const handleUpdateAssignment = async () => {
+  //   const status = await client.updateAssignment(module);
+  //   dispatch(updateAssignment(module));
+  // };
 
   return (
     <div className="m-3">

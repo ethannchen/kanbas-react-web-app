@@ -94,7 +94,7 @@ function Dashboard({
                 // style="width: 270px; height: 150px; background: darkgreen"
               >
                 <img
-                  class="card-img-top w-100"
+                  className="card-img-top w-100"
                   src="../images/course-card.avif"
                   alt="Card banner"
                 ></img>

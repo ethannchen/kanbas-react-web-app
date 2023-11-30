@@ -25,6 +25,7 @@ function Signin() {
       <input
         className="form-control mb-2"
         value={credentials.password}
+        type="password"
         onChange={(e) =>
           setCredentials({ ...credentials, password: e.target.value })
         }

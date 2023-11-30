@@ -33,6 +33,9 @@ function Signin() {
         {" "}
         Signin{" "}
       </button>
+      <div className="text-secondary mt-3">
+        For testing: username: "iron_man", password: "stark123"{" "}
+      </div>
     </div>
   );
 }

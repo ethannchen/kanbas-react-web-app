@@ -86,7 +86,7 @@ function Kanbas() {
         <KanbasNavigation />
         <div className="col">
           <Routes>
-            <Route path="/" element={<Navigate to="Dashboard" />} />
+            <Route path="/" element={<Navigate to="signin" />} />
             <Route path="/users" element={<UserTable />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/account" element={<Account />} />

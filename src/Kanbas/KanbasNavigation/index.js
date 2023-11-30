@@ -11,11 +11,13 @@ import {
   faSitemap,
   faArrowRightFromBracket,
   faQuestionCircle,
+  faSignIn,
 } from "@fortawesome/free-solid-svg-icons";
 // import "../index.css";
 
 function KanbasNavigation() {
   const names = [
+    "Signin",
     "Account",
     "Dashboard",
     "Courses",
@@ -27,6 +29,7 @@ function KanbasNavigation() {
     "Help",
   ];
   const links = [
+    "Signin",
     "Account",
     "Dashboard",
     "Courses/RS101",
@@ -38,6 +41,7 @@ function KanbasNavigation() {
     "Help",
   ];
   const icons = [
+    faSignIn,
     faUserCircle,
     faTachometer,
     faBook,
